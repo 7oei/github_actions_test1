@@ -33,8 +33,10 @@ jobs:
     - run: git status
     - run: git branch
     - name: RunTest
-      working-directory: ${{github.workspace}}/build
-      run: ./a.out
+      working-directory: 
+      run: |
+        cd ${{github.workspace}}/build
+        ./a.out
     # - name: Test
     #   working-directory: ${{github.workspace}}/build
     #   run: ctest -C ${{env.BUILD_TYPE}} 
