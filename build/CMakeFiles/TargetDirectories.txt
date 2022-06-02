@@ -1,3 +1,0 @@
-/home/adachi/github_actions_test1/build/CMakeFiles/rebuild_cache.dir
-/home/adachi/github_actions_test1/build/CMakeFiles/a.out.dir
-/home/adachi/github_actions_test1/build/CMakeFiles/edit_cache.dir
