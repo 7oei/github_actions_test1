@@ -1,9 +1,12 @@
 cmake_minimum_required(VERSION 3.10)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=c++14")
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0")
+
 enable_testing()
 
 project(test_cmake CXX)
-
-set(CMAKE_BUILD_TYPE Release)
 
 add_executable(a.out main.cpp hello.cpp)
 
