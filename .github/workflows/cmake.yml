@@ -25,6 +25,13 @@ jobs:
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
   test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{github.event.pull_request.head.ref}}
+    - run: git status
+    - run: git branch
     - name: RunTest
       run: ./${{github.workspace}}/build/a.out
     # - name: Test
