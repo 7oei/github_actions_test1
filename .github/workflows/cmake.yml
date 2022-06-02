@@ -31,8 +31,6 @@ jobs:
     - name: RunTest2
       working-directory: ${{github.workspace}}/build
       run: ./a.out 
-    - name: RunTest3
-      run: .${{github.workspace}}/build/a.out
     # - name: Test
     #   working-directory: ${{github.workspace}}/build
     #   run: ctest -C ${{env.BUILD_TYPE}} 
