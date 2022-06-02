@@ -14,7 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-
+      with:
+        ref: ${{github.event.pull_request.head.ref}}
+    - run: git status
+    - run: git branch
     - name: Configure CMake
       run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
